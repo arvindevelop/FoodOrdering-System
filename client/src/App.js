@@ -4,7 +4,7 @@ import Mainavbar from './component/Mainavbar';
 import Resturant from './component/Home/Resturant';
 import Login from './component/Login';
 import Signup from './component/Signup';
-
+import Order from './component/Home/Order';
 
 const App = () => {
     return (
@@ -18,6 +18,9 @@ const App = () => {
                 </Route>
                 <Route path="/signup">
                     <Signup />
+                </Route>
+                <Route path="/order">
+                    <Order />
                 </Route>
         </>
     )

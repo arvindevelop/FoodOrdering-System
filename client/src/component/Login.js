@@ -1,9 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import {NavLink} from 'react-router-dom';
 import "./signupandlogin.css";
 
 const Login = () => {
+  
+  const [user,setUser] = useState({name:"",email:"",mobile:""});
+  
   return (
     <>
       <section className="sign-in">

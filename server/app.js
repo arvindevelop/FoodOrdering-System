@@ -26,21 +26,21 @@ app.get('/', (req,res) => {
     res.send(`Hello MERN World Arvind`);
 });
 
-app.get('/about',middleware, (req,res) => {
-    res.send(`Hello MERN World about`);
-})
+// app.get('/about',middleware, (req,res) => {
+//     res.send(`Hello MERN World about`);
+// })
 
-app.get('/contact', (req,res) => {
-    res.send(`Hello MERN World contact`);
-})
+// app.get('/contact', (req,res) => {
+//     res.send(`Hello MERN World contact`);
+// })
 
-app.get('/signin', (req,res) => {
-    res.send(`Hello MERN World signin`);
-})
+// app.get('/signin', (req,res) => {
+//     res.send(`Hello MERN World signin`);
+// })
 
-app.get('/signup', (req,res) => {
-    res.send(`Hello MERN World signup`);
-})
+// app.get('/signup', (req,res) => {
+//     res.send(`Hello MERN World signup`);
+// })
 
 app.listen(PORT, () => {
     console.log(`Server is running at port ${PORT}`);

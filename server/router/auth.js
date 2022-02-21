@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 
 require('../db/conn');
 const User = require('../model/userSchema');
+const Order = require('../model/orderSchema');
 
 router.get('/', (req,res) => {
     res.send(`Hello MERN World Arvind`);
@@ -53,6 +54,23 @@ router.post('/register', async(req,res) => {
             await user.save();
             res.status(201).json({message:"user registered successfully"});
         }
+    }catch(err){
+        console.log(err);
+    }
+    
+});
+
+router.post('/bookorder', async(req,res) => {
+
+    const  {name,email,mobile,product_id,home_delivery,address} = req.body;
+    if(!name || !email || !mobile || !product_id || !home_deliver){
+        return res.status(422).json({ error: "plz fill the field properly "});
+    }
+
+    try{
+            const order = new Order({name,email,mobile,product_id,home_delivery,address});
+            await order.save();
+            res.status(201).json({message:"Order Confirmed"});
     }catch(err){
         console.log(err);
     }

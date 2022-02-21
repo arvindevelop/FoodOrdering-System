@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom';
 
 const MenuCard = ({ menuData }) => {
 
@@ -22,7 +23,7 @@ const MenuCard = ({ menuData }) => {
                                         <div className="card-read">Read</div>
                                     </div>
                                     <img src={image} alt="images" className="card-media"/>
-                                    <span className="card-tag subtle">Order Now</span>
+                                    <NavLink to="/order"><span className="card-tag subtle">Order Now</span></NavLink>
                                 </div>
                             </div>
                         </>
