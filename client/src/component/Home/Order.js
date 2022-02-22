@@ -3,10 +3,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 import {NavLink,useHistory} from 'react-router-dom';
 import "../signupandlogin.css";
 
-const Order = () => {
+const Order = ({username,email,mobile,product_id}) => {
     const history = useHistory();
 
-  const [order,setOrder] = useState({name:"",email:"",mobile:"",product_id:"",home_delivery:"",address:""});
+  const [order,setOrder] = useState({name:username,email:email,mobile:mobile,product_id:product_id,address:""});
 
   let name,value;
   const handleInputs = (e) =>{
@@ -20,7 +20,7 @@ const Order = () => {
   const PostData = async (e) =>{
     e.preventDefault();
 
-    const {name,email,mobile,product_id,home_delivery,address } = order;
+    const {name,email,mobile,product_id,address } = order;
 
     const res = await fetch('/bookorder',{
       method:"POST",
@@ -28,7 +28,7 @@ const Order = () => {
         "Content-Type" : "application/json"
       },
       body:JSON.stringify({
-        name,email,mobile,product_id,home_delivery,address
+        name,email,mobile,product_id,address
       })
     });
     const data = await res.json();
@@ -57,37 +57,40 @@ const Order = () => {
                 <label htmlFor='name'>
                   <i className='zmdi zmdi-account material-icons-name'></i>
                 </label>
-                <input type="text" name="name" id="name" autoComplete="off" placeholder="" value=""/>
+                <input type="text" name="name" id="name" value={order.name}/>
               </div>
 
               <div className='form-group'>
                 <label htmlFor='email'>
                   <i className='zmdi zmdi-email material-icons-name'></i>
                 </label>
-                <input type="email" name="email" id="email" autoComplete="off" placeholder="" value=""/>
+                <input type="email" name="email" id="email" value={order.email}/>
               </div>
 
               <div className='form-group'>
                 <label htmlFor='mobile'>
                   <i className='zmdi zmdi-phone-to-talk material-icons-name'></i>
                 </label>
-                <input type="number" name="mobile" id="mobile" autoComplete="off" placeholder="" value=""/>
+                <input type="number" name="mobile" id="mobile" value={order.mobile}/>
               </div>
               
               <div className='form-group'>
                 <label htmlFor='produt_id'>
                 </label>
-                <input type="number" name="product_id" id="product_id" autoComplete="off" placeholder="" value=""/>
+                <input type="number" name="product_id" id="product_id" value={order.product_id}/>
               </div>
 
               <div className='form-group'>
                 <label htmlFor='address'>
                 </label>
-                <address><input type="string" name="address" id="address" Placeholder="Enter your address"/></address>
+                <address><input type="string" name="address" id="address" 
+                value={order.address}
+                onChange={handleInputs}
+                Placeholder="Enter your address"/></address>
               </div>
 
               <div className='form-group form-button'>
-                <input type="submit" name="ordered" id="ordered" className='form-submit' value='Order'/>
+                <input type="submit" name="ordered" id="ordered" className='form-submit' value='Place Order' onClick={PostData}/>
               </div>
             </form>
 
