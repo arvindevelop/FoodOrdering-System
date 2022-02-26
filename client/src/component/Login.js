@@ -38,12 +38,6 @@ const Login = () => {
     Constant.name = userDetail.name;
     Constant.email = userDetail.email;
     Constant.mobile = userDetail.mobile;
-    //console.log(userDetail.mobile);
-    //console.log(name, mobile);
-
-    // var getName = () => {
-    //   return userDetail;    // Or pull this from cookie/localStorage
-    // };
 
     if(data.status === 400 || !data){
         window.alert('Invalid email or password');

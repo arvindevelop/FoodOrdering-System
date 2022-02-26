@@ -6,9 +6,6 @@ require('../db/conn');
 const User = require('../model/userSchema');
 const Order = require('../model/orderSchema');
 
-router.get('/', (req,res) => {
-    res.send(`Hello MERN World Arvind`);
-});
 
 //using promising
 // router.post('/register', (req,res) => {

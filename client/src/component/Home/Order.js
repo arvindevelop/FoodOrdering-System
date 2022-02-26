@@ -1,11 +1,11 @@
 import React,{useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
-import {NavLink,useHistory,useParams,useLocation} from 'react-router-dom';
+import {useHistory,useLocation} from 'react-router-dom';
 import "../signupandlogin.css";
 
-// const Order = ({username,email,mobile,product_id}) => {
   const Order = () => {  
     const history = useHistory();
+
   const {user_name,user_email,user_mobile,product_name,product_id} = useLocation().state;
   const [order,setOrder] = useState({name:user_name,email:user_email,mobile:user_mobile,product_name:product_name,product_id:product_id,address:""});
 
@@ -22,7 +22,6 @@ import "../signupandlogin.css";
     e.preventDefault();
 
     const {name,email,mobile,product_name,product_id,address } = order;
-    console.log(name,email,mobile,product_name,product_id,address);
 
     const res = await fetch('/bookorder',{
       method:"POST",
@@ -45,9 +44,7 @@ import "../signupandlogin.css";
       history.push('/');
     }
   }
-  //console.log('Product id');
-  //const {user_name,user_email,user_mobile,product_name,product_id} = useLocation().state;
-  //console.log(user_name,user_email,user_mobile,product_name,product_id)
+  
   return (
     <>
       <section className="bookOrder">
@@ -81,14 +78,12 @@ import "../signupandlogin.css";
               <div className='form-group'>
                 <label htmlFor='product_name'>
                 </label>
-                {/* <input type="number" name="product_id" id="product_id" placeholder="Product id..." value={order.product_id}/> */}
                 <input type="text" name="product_name" id="product_name" placeholder="Product name..." value={order.product_name}/>
               </div>
 
               <div className='form-group'>
                 <label htmlFor='produt_id'>
                 </label>
-                {/* <input type="number" name="product_id" id="product_id" placeholder="Product id..." value={order.product_id}/> */}
                 <input type="number" name="product_id" id="product_id" placeholder="Product id..." value={order.product_id}/>
               </div>
 
