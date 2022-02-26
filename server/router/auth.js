@@ -62,13 +62,13 @@ router.post('/register', async(req,res) => {
 
 router.post('/bookorder', async(req,res) => {
 
-    const  {name,email,mobile,product_id,home_delivery,address} = req.body;
-    if(!name || !email || !mobile || !product_id || !home_deliver){
+    const  {name,email,mobile,product_name,product_id,address} = req.body;
+    if(!name || !email || !mobile || !product_name || !product_id || !address){
         return res.status(422).json({ error: "plz fill the field properly",status:422});
     }
 
     try{
-            const order = new Order({name,email,mobile,product_id,home_delivery,address});
+            const order = new Order({name,email,mobile,product_name,product_id,address});
             await order.save();
             res.status(201).json({message:"Order Confirmed",status:201});
     }catch(err){
@@ -93,7 +93,7 @@ router.post('/signin',async(req,res) =>{
             if(!isMatch){
                 res.status(400).json({error:"invalid credential",status:400});
             }else{
-                res.status(201).json({message:"signin successfully",status:201});
+                res.status(201).json({message:"signin successfully",status:201,userData:userLogin});
             }
         }else{
             res.status(400).json({error:"invalid credential",status:400});

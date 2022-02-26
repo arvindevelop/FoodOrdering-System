@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import {NavLink,useHistory} from 'react-router-dom';
 import "./signupandlogin.css";
+import Constant from './Home/Constant';
 
 const Login = () => {
   
@@ -33,6 +34,16 @@ const Login = () => {
       })
     });
     const data = await res.json();
+    const userDetail = data.userData;
+    Constant.name = userDetail.name;
+    Constant.email = userDetail.email;
+    Constant.mobile = userDetail.mobile;
+    //console.log(userDetail.mobile);
+    //console.log(name, mobile);
+
+    // var getName = () => {
+    //   return userDetail;    // Or pull this from cookie/localStorage
+    // };
 
     if(data.status === 400 || !data){
         window.alert('Invalid email or password');

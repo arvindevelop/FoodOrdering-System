@@ -14,6 +14,11 @@ const orderSchema = new mongoose.Schema({
         type: Number,
         required : true
     },
+    product_name:
+    {
+        type: String,
+        required : true
+    },
     product_id: 
     {
         type: Number,
@@ -26,10 +31,10 @@ const orderSchema = new mongoose.Schema({
 })
 
 //hashing
-orderSchema.pre('save', async function(next) {
-    //check signin or not
-    next();
-})
+// orderSchema.pre('save', async function(next) {
+//     //check signin or not
+//     next();
+// })
 
 const Order = mongoose.model('Order',orderSchema);
 
