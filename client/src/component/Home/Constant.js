@@ -1,6 +1,6 @@
 let Constants = {
-    name: "Arvind",
-    email: 'aks@gmail.com',
-    mobile: 8976543256
+    name: "",
+    email: '',
+    mobile: 0
   }
   export default Constants
