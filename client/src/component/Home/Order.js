@@ -47,64 +47,6 @@ import "../signupandlogin.css";
   
   return (
     <>
-      {/* <section className="bookOrder">
-      <div className='container mt-5'>
-        <div className='order-content'>
-          <div className='order-form'>
-            <h2 className='form-title'>Order Now</h2>
-            <form className='register-form' id='register-form'>
-
-            <div className='form-group'>
-                <label htmlFor='name'>
-                  <i className='zmdi zmdi-account material-icons-name'></i>
-                </label>
-                <input type="text" name="name" id="name" placeholder="Name..." value={order.name}/>
-              </div>
-
-              <div className='form-group'>
-                <label htmlFor='email'>
-                  <i className='zmdi zmdi-email material-icons-name'></i>
-                </label>
-                <input type="email" name="email" id="email" placeholder="Email..." value={order.email}/>
-              </div>
-
-              <div className='form-group'>
-                <label htmlFor='mobile'>
-                  <i className='zmdi zmdi-phone-to-talk material-icons-name'></i>
-                </label>
-                <input type="number" name="mobile" id="mobile" placeholder="Mobile..." value={order.mobile}/>
-              </div>
-              
-              <div className='form-group'>
-                <label htmlFor='product_name'>
-                </label>
-                <input type="text" name="product_name" id="product_name" placeholder="Product name..." value={order.product_name}/>
-              </div>
-
-              <div className='form-group'>
-                <label htmlFor='produt_id'>
-                </label>
-                <input type="number" name="product_id" id="product_id" placeholder="Product id..." value={order.product_id}/>
-              </div>
-
-              <div className='form-group'>
-                <label htmlFor='address'>
-                </label>
-                <address><input type="string" name="address" id="address" 
-                value={order.address}
-                onChange={handleInputs}
-                Placeholder="Enter your address"/></address>
-              </div>
-
-              <div className='form-group form-button'>
-                <input type="submit" name="ordered" id="ordered" className='form-submit' value='Place Order' onClick={PostData}/>
-              </div>
-            </form>
-
-          </div>
-        </div>
-      </div>
-    </section> */}
     <div className="container shadow my-5">
         <div className="row">
           <div className="col-lg-6 col-12 d-flex  flex-column align-item-center text-white form text-center sign">

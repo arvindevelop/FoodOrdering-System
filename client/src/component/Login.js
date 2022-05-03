@@ -52,43 +52,6 @@ const Login = () => {
   
   return (
     <>
-      {/* <section className="sign-in">
-      <div className='container mt-5'>
-        <div className='signin-content'>
-          <div className='signin-form'>
-            <h2 className='form-title'>Sign in</h2>
-            <form className='register-form' id='register-form'>
-
-              <div className='form-group'>
-                <label htmlFor='email'>
-                  <i className='zmdi zmdi-email material-icons-name'></i>
-                </label>
-                <input type="email" name="email" id="email" autoComplete="off" 
-                value={user.email}
-                onChange={handleInputs}
-                placeholder="Enter your email"/>
-              </div>
-              
-              <div className='form-group'>
-                <label htmlFor='password'>
-                  <i className='zmdi zmdi-lock material-icons-name'></i>
-                </label>
-                <input type="password" name="password" id="password" autoComplete="off" 
-                value={user.password}
-                onChange={handleInputs}
-                placeholder="Password"/>
-              </div>
-
-              <div className='form-group form-button'>
-                <input type="submit" name="signin" id="signin" className='form-submit' value='Login' onClick={PostData}/>
-                <NavLink to='/signup' className='signin-link'>Create Account</NavLink>
-              </div>
-            </form>
-
-          </div>
-        </div>
-      </div>
-    </section> */}
       <div className="container shadow my-5">
         <div className="row">
           <div className="col-lg-6 col-12 d-flex flex-column align-item-center text-white form text-center sign">
