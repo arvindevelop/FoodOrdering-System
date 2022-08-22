@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-//const bcrypt = require('bcryptjs');
 
 const orderSchema = new mongoose.Schema({
     name:{
@@ -30,11 +29,6 @@ const orderSchema = new mongoose.Schema({
     }
 })
 
-//hashing
-// orderSchema.pre('save', async function(next) {
-//     //check signin or not
-//     next();
-// })
 
 const Order = mongoose.model('Order',orderSchema);
 

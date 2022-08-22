@@ -36,18 +36,18 @@ import "../signupandlogin.css";
 
     if(data.status === 422 || !data){
         window.alert('Invalid order details');
-        console.log('Invalid order details');
+        // console.log('Invalid order details');
     }
     else{
       window.alert('Order confirmed');
-      console.log('Order confirmed');
+      // console.log('Order confirmed');
       history.push('/');
     }
   }
   
   return (
     <>
-    <div className="container shadow my-5">
+    <div className="container shadow my-5 py-5">
         <div className="row">
           <div className="col-lg-6 col-12 d-flex  flex-column align-item-center text-white form text-center sign">
             <h1 className="display-4 fw-bolder my-5 my-5">
@@ -67,29 +67,29 @@ import "../signupandlogin.css";
 
               <div className="col-lg-6">
               <label for="Fname" class="form-label">User Name</label>
-                <input type="text" class="form-control" id="name" name="name" value={order.name} />
+                <input type="text" class="form-control" id="name" name="name" value={order.name} disabled/>
               </div>
 
             </div>
 
               <div class="mb-2">
                 <label for="exampleInputEmail1" class="form-label">User Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" name="email" value={order.email}/>
+                <input type="email" class="form-control" id="exampleInputEmail1" name="email" value={order.email} disabled/>
               </div>
 
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">User Mobile</label>
-                <input type="number" class="form-control" id="exampleInputPassword1"name="mobile" value={order.mobile} />
+                <input type="number" class="form-control" id="exampleInputPassword1"name="mobile" value={order.mobile} disabled/>
               </div>
 
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Product Name</label>
-                <input type="text" class="form-control" id="exampleInputPassword1"name="product_name" value={order.product_name} />
+                <input type="text" class="form-control" id="exampleInputPassword1"name="product_name" value={order.product_name} disabled/>
               </div>
 
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Product ID</label>
-                <input type="number" class="form-control" id="exampleInputPassword1"name="product_id" value={order.product_id} />
+                <input type="number" class="form-control" id="exampleInputPassword1"name="product_id" value={order.product_id} disabled/>
               </div>
 
               <div class="mb-3">

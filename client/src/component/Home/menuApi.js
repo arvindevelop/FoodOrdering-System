@@ -6,27 +6,29 @@ const Menu = [
       category: "breakfast",
       price: "12₹",
       description:
-        "I love Maggi really oo yues  Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        "I love Maggi really. ",
     },
   
     {
       id: 2,
+      image: "images/corn-photo.jpg",
+      product_name: "corn",
+      category: "breakfast",
+      price: "10₹",
+      description:
+        "Fried and creespy corn. ",
+    },
+
+    {
+      id: 3,
       image: "images/allupakoida.jpg",
       product_name: "allu pakauda",
       category: "evening",
       price: "20₹",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        "Tasty and Crunchy. ",
     },
-    {
-      id: 3,
-      image: "images/corn.jpg",
-      product_name: "corn",
-      category: "breakfast",
-      price: "10₹",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
-    },
+    
     {
       id: 4,
       image: "../images/chola.jpg",
@@ -34,7 +36,7 @@ const Menu = [
       category: "lunch",
       price: "50₹",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        "Tasty and Delicious chola. ",
     },
     {
       id: 5,
@@ -43,16 +45,16 @@ const Menu = [
       category: "evening",
       price: "80₹",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        "Veg pizza tasty. ",
     },
     {
       id: 6,
       image: "../images/nonvegthali.jpg",
-      product_name: "Non-Veg Thali",
+      product_name: "Chicken Thali",
       category: "dinner",
       price: "180₹",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        "Take the taste of non-veg. ",
     },
     {
       id: 7,
@@ -61,7 +63,7 @@ const Menu = [
       category: "dinner",
       price: "60₹",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        "Favourite to all. ",
     },
     {
       id: 8,
@@ -70,7 +72,7 @@ const Menu = [
       category: "lunch",
       price: "60₹",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        "Take the taste of rajma with rice. ",
     },
     {
       id: 9,
@@ -79,16 +81,16 @@ const Menu = [
       category: "evening",
       price: "10₹",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        "Delicious samosa. ",
     },
     {
       id: 10,
       image: "../images/samosa.jpg",
       product_name: "Special Samosa",
-      category: "Arvind",
+      category: "Special",
       price: "10₹",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        "Special somosa of restaurant. ",
     },
   ];
   

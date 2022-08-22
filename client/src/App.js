@@ -4,6 +4,8 @@ import Mainavbar from './component/Mainavbar';
 import Resturant from './component/Home/Resturant';
 import Login from './component/Login';
 import Signup from './component/Signup';
+import Admin from './component/Admin';
+import Item from './component/Item';
 import Order from './component/Home/Order';
 
 const App = () => {
@@ -21,6 +23,12 @@ const App = () => {
                 </Route>
                 <Route path="/order">
                     <Order />
+                </Route>
+                <Route path="/item">
+                    <Item />
+                </Route>
+                <Route path="/admin">
+                    <Admin />
                 </Route>
         </>
     )

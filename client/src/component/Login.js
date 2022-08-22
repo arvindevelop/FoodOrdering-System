@@ -52,7 +52,7 @@ const Login = () => {
   
   return (
     <>
-      <div className="container shadow my-5">
+      <div className="container shadow my-5 py-5">
         <div className="row">
           <div className="col-lg-6 col-12 d-flex flex-column align-item-center text-white form text-center sign">
             <h1 className="display-4 fw-bolder my-5 my-5">

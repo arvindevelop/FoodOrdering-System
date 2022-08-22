@@ -5,30 +5,8 @@ const bcrypt = require('bcryptjs');
 require('../db/conn');
 const User = require('../model/userSchema');
 const Order = require('../model/orderSchema');
+const Item = require('../model/itemSchema');
 
-
-//using promising
-// router.post('/register', (req,res) => {
-
-//     const  {name,email,mobile,password,cpassword } = req.body;
-//     if(!name || !email || !mobile || !password || !cpassword){
-//         return res.status(422).json({ error: "plz fill the field properly "});
-//     }
-
-//     User.findOne({email:email})
-//     .then((userExist) => {
-//         if(userExist){
-//             return res.status(422).json({error: "Email already exist"});
-//         }
-
-//         const user = new User({name,email,mobile,password,cpassword });
-
-//         user.save().then(() => {
-//             res.status(201).json({message:"user registered successfully"});
-//         }).catch((err) => res.status(500).json({error:"Failed to register"}));
-//     }).catch((err) => {console.log(err)});
-
-// });
 
 //using async
 router.post('/register', async(req,res) => {
@@ -73,6 +51,33 @@ router.post('/bookorder', async(req,res) => {
     }
     
 });
+
+router.post('/createItem', async(req,res) => {
+
+    const  {pid, productname, category, price, description} = req.body;
+    if(!pid || !productname || !category || !price || !description){
+        return res.status(422).json({ error: "plz fill the field properly",status:422});
+    }
+
+    try{
+            const item = new Item({pid, productname, category, price, description});
+            await item.save();
+            res.status(201).json({message:"Item Added",status:201});
+    }catch(err){
+        console.log(err);
+    }
+    
+});
+
+router.get('/getitem', async (req,res,next)=>{
+    try{
+      const item = await Item.find();
+      return res.status(200).json({data: item});
+    } catch(err) {
+      console.log(err);
+      res.status(500).json({ error: 'server error' });
+    }
+  });
 
 router.post('/signin',async(req,res) =>{
     try{

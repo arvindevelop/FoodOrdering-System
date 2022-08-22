@@ -27,7 +27,7 @@ const MenuCard = ({ menuData }) => {
                                         <div className="card-read">Read</div>
                                     </div>
                                     <img src={image} alt="images" className="card-media"/>
-                                    <NavLink to={{pathname: "/order",state:{user_name:name,user_email:email,user_mobile:mobile,product_name:product_name,product_id:id,} }}><span className="card-tag subtle">Order Now</span></NavLink>
+                                    <NavLink to={{pathname: "/order",state:{user_name:name,user_email:email,user_mobile:mobile,product_name:product_name,product_id:id,} }}><span className="card-tag subtle">Add to Cart</span></NavLink>
                                 </div>
                             </div>
                         </>
